@@ -1,0 +1,29 @@
+<!ELEMENT librairie (en-tête, livre+)>
+<!ELEMENT en-tête (#PCDATA|strong|em|img)*>
+<!ELEMENT livre (titre,auteurs+,description,prix)>
+<!ATTLIST livre ISBN ID #REQUIRED>
+<!ELEMENT strong (#PCDATA)>
+<!ELEMENT em (#PCDATA)>
+<!ELEMENT img EMPTY>
+<!ATTLIST img src CDATA #REQUIRED
+              title CDATA #IMPLIED
+>
+<!ELEMENT auteurs (auteur+|collectif)>
+<!ELEMENT collectif (direction,membres)>
+<!ELEMENT membres (#PCDATA)>
+<!ELEMENT direction (nom,prenom?)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT auteur (nom,prenom)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT description (#PCDATA|strong|em|img)*>
+<!ELEMENT prix (#PCDATA)>
+
+<!ATTLIST prix devise (euro|livre|dollard) "euro"
+               type  (HT|TTC) "HT"
+               tva CDATA #FIXED "5.5"
+>
+
+
+<!ELEMENT  parametre ((nom,prenom)|direction)(#PCDATA|strong|em|img)*>
+<!ENTITY  entite "©Librairie & Internet 2020">

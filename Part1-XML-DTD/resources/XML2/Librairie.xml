@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE librairie SYSTEM "Librairie.dtd">
+
+<librairie>
+
+    <en-tête>Nous sommes ici dans l'en-tête et nous pouvons utiliser plusieurs balises :
+    <strong> ici la balise strong </strong>
+        <em> Ici em </em>
+        <img src="souce.jpg" title="Immage"/>
+             ou du texte au millieu
+        <em> et une autre balise </em>
+    </en-tête>
+    
+    <livre ISBN="12">
+        <titre> Premier livre</titre>
+        <auteurs>
+            <auteur>
+                <nom> De La Fontaine</nom>
+                <prenom> Jean</prenom>
+            </auteur>
+
+            <collectif>
+                <direction>
+                    <nom> Mallol</nom>
+                </direction>
+                <membres> Ici on peut voir les membres</membres>
+            </collectif>
+        </auteurs>
+        <description> Ici une description semblable à l'en-tête
+            <strong> ici la balise strong </strong>
+            <em> Ici em </em>
+            <img src="souce.jpg" title="Immage"/>
+            ou du texte au millieu
+            <em> et une autre balise </em>
+        </description>
+        <prix  devise="dollard" type="HT" tva="5.5"> 12 </prix>
+    </livre>
+</librairie>
