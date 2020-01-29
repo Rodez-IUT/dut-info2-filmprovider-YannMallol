@@ -1,0 +1,2 @@
+films/film/title
+/films/film[titre="Minority Report"]/resume/text/texte()
