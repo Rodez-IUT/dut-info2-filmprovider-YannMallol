@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1. Sélectionner les titres de tous les films.
 
 /films/film/titre
@@ -34,3 +35,14 @@ courante est la liste résultante à deux éléments
 
 8. Retourner le nombre de films sortis en 2003.
 count(//film[@annee = 2003])
+=======
+films/film/title
+/films/film[titre="Minority Report"]/resume/text/texte()
+/films/realisateur[last()]/nom
+/films/film[2]/titre
+/films/film[position()]/resume/text[contains(text(),"mafia")]
+/films/film[resume/image]/titre
+/films/film/@annee
+7)/films/film[@id_realisateur=(../realisateur[nom="Scorsese"]/@id_realisateur)]/@annee
+8)count(/films/film[@annee="2003"])
+>>>>>>> 0f7425f4c56d8cd33f7c468c235e10ee334ad011
