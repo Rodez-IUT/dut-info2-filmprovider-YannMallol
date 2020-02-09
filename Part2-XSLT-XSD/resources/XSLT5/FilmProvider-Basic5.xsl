@@ -28,12 +28,24 @@
         <xsl:variable name="Id" select="@id_realisateur"/>
         <tr>
             <xsl:if test="resume/image/@source=true()">
-                <xsl:variable name="img" select="resume/image/@source"/>
-                <td> <img src="$img"/> </td>
+
+                <td>
+                    <xsl:element name="img">
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="resume/image/@source"/>
+                        </xsl:attribute>
+                    </xsl:element>
+                </td>
             </xsl:if>
-            <td><xsl:value-of select="titre"/></td>
-            <td><xsl:value-of select="resume/text"/></td>
-            <td><xsl:value-of select="//realisateur[ $Id= @id_realisateur]"/></td>
+            <td>
+                <xsl:value-of select="titre"/>
+            </td>
+            <td>
+                <xsl:value-of select="resume/text"/>
+            </td>
+            <td>
+                <xsl:value-of select="//realisateur[ $Id= @id_realisateur]"/>
+            </td>
 
 
         </tr>
