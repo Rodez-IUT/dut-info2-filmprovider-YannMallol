@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="films">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="realisateur" type="xs:complexType"/>
+                <xs:element name="film" type="xs:complexType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="film">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titre" type="xs:string"/>
+                <xs:element name="resume" type="xs:complexType"/>
+            </xs:sequence>
+
+            <xs:attribute name="id_film" type="xs:string"/>
+            <xs:attribute name="id_realisateur" type="xs:string"/>
+            <xs:attribute name="annee" type="xs:int"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="resume">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element name="image" type="xs:complexType"/>
+               <xs:element name="texte" type="xs:string"/>
+           </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+
+    <xs:element name="image">
+        <xs:complexType>
+            <xs:attribute name="source" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="realisateur">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="prenom" type="xs:string"/>
+                <xs:element name="nom" type="xs:string"/>
+            </xs:sequence>
+
+            <xs:attribute name="id_realisateur" type="xs:string"/> <!--revoir id realisateur et autre id-->
+        </xs:complexType>
+
+    </xs:element>
+</xs:schema>
