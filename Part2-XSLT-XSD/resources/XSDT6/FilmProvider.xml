@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <films xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:noNamespaceSchemaLocation="FilmProvier.xsd">
-    <realisateur id_realisateur="real_01">
-        <prenom>Martin</prenom>
-        <nom>Scorsese</nom>
-    </realisateur>
+       targetNamespace="http://formationxml/filmprovider/FilmProvider.xsd"
+       xmlns:fox="http://formationxml/filmprovider">
+    <fox:realisateur id_realisateur="real_01">
+        <fox:prenom>Martin</fox:prenom>
+        <fox:nom>Scorsese</fox:nom>
+    </fox:realisateur>
     <realisateur id_realisateur="real_02">
         <prenom>Quentin</prenom>
         <nom>Tarantino</nom>

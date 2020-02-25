@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://formationxml/filmprovider"
+           xmlns:fox="http://formationxml/filmprovider"
+           elementFormDefault="qualified">
     <xs:element name="films" type="Films"/>
     <xs:element name="film" type="Film"/>
     <xs:element name="realisateur" type="Realisateur"/>
 
     <xs:complexType name="Films">
+
         <xs:sequence>
             <xs:element ref="realisateur" maxOccurs="unbounded"/>
             <xs:element ref="film" maxOccurs="unbounded"/>
         </xs:sequence>
+
     </xs:complexType>
 
     <xs:complexType name="Realisateur">
